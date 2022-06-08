@@ -1,0 +1,37 @@
+@Event('start')
+start() {
+    > What is your name ?
+    Prompt()
+    > Welcome { :text }
+    
+    @Format('quickReplies', ['Fine', 'Sad'])
+    > How are you doing?
+}
+
+@Intent('greeting', [
+    'hello',
+    'good afternoon',
+    'good morning',
+    'good night',
+    'good evening',
+    'thanks',
+    'namastey',
+    'नमस्ते',
+])
+greeting() {
+    > Hey,{ :text}, How are You !
+}
+
+
+
+
+@Event('nothing')
+nothing() {
+    > What ?
+}
+@Intent('booking', [
+    'I want book a room'
+])
+booking() {
+    > Ok, I book a room
+}
