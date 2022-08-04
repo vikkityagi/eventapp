@@ -40,7 +40,7 @@ app.use(express.json())
 app.use(cors())
 // app.use('/api/auth', authRoute)
 
-mongoose.connect('mongodb+srv://user2:12345@cluster0.ztx5i.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://${mongodbusername}:${mongodbuserpassword}cluster0.ztx5i.mongodb.net/?retryWrites=true&w=majority', {
     // useNewUrlParser: true,
     // useCreateIndex: true,
     useUnifiedTopology: true,
